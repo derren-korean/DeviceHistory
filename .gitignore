@@ -1,0 +1,53 @@
+*.iml
+# Android Studio 관련
+.idea/
+.gradle/
+build/
+captures/
+.externalNativeBuild/
+.cxx/
+local.properties
+*.iml
+
+# Android 패키징 관련
+.DS_Store
+*.apk
+*.ap_
+*.aab
+*.dex
+*.class
+
+# Java 관련
+*.jar
+*.war
+*.ear
+
+# Kotlin 관련
+*.ktlint.cache
+*.kotlin_metadata/
+
+# Unit 테스트 결과
+/test-results/
+/out/
+
+# Gradle Wrapper 관련
+gradle/wrapper/gradle-wrapper.properties
+gradle/wrapper/gradle-wrapper.jar
+
+# 환경에 따라 생성되는 파일
+*.log
+*.hprof
+
+# IDE 설정
+*.keystore
+*.key
+*.jks
+
+# ProGuard 관련
+proguard/
+
+# Mac OS 관련
+*.DS_Store
+
+# Windows 관련
+Thumbs.db
