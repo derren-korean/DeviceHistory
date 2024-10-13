@@ -1,4 +1,4 @@
-package com.derren.devicehistory.ui.home
+package com.derren.deviceHistory.ui.home
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,6 +8,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.derren.devicehistory.databinding.FragmentHomeBinding
+import com.derren.deviceHistory.ui.report.ReportViewModel
 
 class HomeFragment : Fragment() {
 
@@ -22,14 +23,14 @@ class HomeFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val homeViewModel =
-            ViewModelProvider(this).get(HomeViewModel::class.java)
+        val reportViewModel =
+            ViewModelProvider(this).get(ReportViewModel::class.java)
 
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
         val textView: TextView = binding.textHome
-        homeViewModel.text.observe(viewLifecycleOwner) {
+        reportViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
         return root

@@ -1,4 +1,4 @@
-package com.derren.devicehistory
+package com.derren.deviceHistory
 
 import android.os.Bundle
 import android.widget.Toast
@@ -11,11 +11,14 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.derren.deviceHistory.db.DeviceHistoryDatabase
+import com.derren.devicehistory.R
 import com.derren.devicehistory.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
+    private lateinit var dbHelper: DeviceHistoryDatabase
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -80,10 +83,16 @@ class MainActivity : AppCompatActivity() {
         val navController = findNavController(R.id.nav_host_fragment_activity_main)
         val appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications
+                R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_settings
             )
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+        // 네비게이션 셋업 후 데이터베이스 초기화 진행
+        initializeDatabase()
+    }
+    private fun initializeDatabase() {
+        dbHelper = DeviceHistoryDatabase(this)
+        // 이후 데이터베이스 관련 작업 진행 가능
     }
 }
