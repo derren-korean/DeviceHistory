@@ -1,6 +1,8 @@
 <resources>
-    <string name="app_name">Device history</string>
+    <string name="app_name">장비 이력</string>
     <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_dashboard">현황</string>
+    <string name="title_report">보고</string>
+    <string name="title_settings">설정</string>
+    <string name="fab_description">공유</string>
 </resources>

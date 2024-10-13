@@ -1,4 +1,4 @@
-package com.derren.devicehistory.ui.dashboard
+package com.derren.deviceHistory.ui.dashboard
 
 import android.os.Bundle
 import android.view.LayoutInflater

@@ -1,4 +1,4 @@
-package com.derren.devicehistory.ui.home
+package com.derren.deviceHistory.ui.home
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
