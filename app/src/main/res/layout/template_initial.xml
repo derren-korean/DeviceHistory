@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+    <!-- 1st row: Title -->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="[팀_초동_장애보고] 교대 파트"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:paddingBottom="8dp" />
+
+    <!-- 1. 장애명 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1. 장애명 :"
+        android:textSize="16sp"
+        android:paddingTop="8dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="장애명을 입력하세요"
+        android:inputType="text"
+        android:background="#cccccc" />
+
+    <!-- 2. 발생일시 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="2. 발생일시 :"
+        android:textSize="16sp"
+        android:paddingTop="8dp" />
+
+    <!-- Date and Time input -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/date_picker_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="날짜 선택"
+            android:backgroundTint="?attr/colorPrimary"
+            android:textColor="@android:color/white" />
+
+        <EditText
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:hint="HH"
+            android:inputType="number"
+            android:maxLength="2"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" : "
+            android:textSize="16sp"
+            android:gravity="center" />
+
+        <EditText
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:hint="MM"
+            android:inputType="number"
+            android:maxLength="2"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <!-- 3. 위치 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="3. 위치 :"
+        android:textSize="16sp"
+        android:paddingTop="8dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="위치를 입력하세요"
+        android:inputType="text"
+        android:background="#cccccc" />
+
+    <!-- 4. 내용 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="4. 내용 :"
+        android:textSize="16sp"
+        android:paddingTop="8dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="내용을 입력하세요"
+        android:inputType="textMultiLine"
+        android:background="#cccccc" />
+
+    <!-- 5. 원인 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="5. 원인 :"
+        android:textSize="16sp"
+        android:paddingTop="8dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="원인을 입력하세요"
+        android:inputType="text"
+        android:background="#cccccc" />
+
+    <!-- 6. 현장책임자 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="6. 현장책임자 : 파트장"
+        android:textSize="16sp"
+        android:paddingTop="8dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="이름 입력"
+        android:inputType="text"
+        android:background="#cccccc" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="전화번호 입력"
+        android:inputType="phone"
+        android:background="#cccccc" />
+</LinearLayout>
